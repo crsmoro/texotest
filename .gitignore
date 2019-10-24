@@ -1,0 +1,7 @@
+.classpath
+.settings
+.project
+target
+.externalToolBuilders
+src/main/ngapp/dist/**
+src/main/ngapp/node_modules

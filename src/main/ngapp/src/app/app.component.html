@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Frontend Angular Test</a>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active clickable" (click)="clickDashboard()">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only" [class.d-block]="showDashboard">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link clickable" (click)="clickList()">
+              <span data-feather="list"></span>
+              List <span class="sr-only" [class.d-block]="showList">(current)</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 p-4">
+		<dashboard *ngIf="showDashboard"></dashboard>
+		<list *ngIf="showList"></list>
+    </main>
+  </div>
+</div>
